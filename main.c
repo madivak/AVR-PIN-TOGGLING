@@ -24,6 +24,7 @@ int main(void)
 		 { 
 			PORTB &= ~(1<<PORTB1);	//Toggle PORTB1 LOW
 		 }
+		//This would also suffice PINB = _BV(PB1);   //note this = and not |= wold toggle pin OFF and ON
 	}
 
 }
