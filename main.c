@@ -24,7 +24,10 @@ int main(void)
 		 { 
 			PORTB &= ~(1<<PORTB1);	//Toggle PORTB1 LOW
 		 }
-		//This would also suffice PINB = _BV(PB1);   //note this = and not |= wold toggle pin OFF and ON
+		//This would also suffice 
+		//PINB = _BV(PB1);   //This is allowed for AVR, functionality is available
+		//OR 
+		//PORTB ^= _BV(PB1);  //This is universal, thus portable.  note this = and not |= wold toggle pin OFF and ON
 	}
 
 }
